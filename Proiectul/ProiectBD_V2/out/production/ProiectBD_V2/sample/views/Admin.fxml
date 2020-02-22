@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controllers.AdminController">
+
+
+    <children>
+        <StackPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" StackPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="580.0" prefWidth="230.0" style="-fx-background-color: orange;">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="18.0" prefWidth="237.0" text="PIZZADANIEL" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="24.0" />
+                                    </font>
+                                </Label>
+
+                                <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                                    </VBox.margin>
+                                    <children>
+
+                                        <Label onMouseClicked="#goToMenu" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="237.0" text="Meniu">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0">
+                                                    <image>
+                                                        <Image url="@/sample/views/Imagini/pizza_icon.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets top="50.0" />
+                                            </VBox.margin>
+                                        </Label>
+
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+
+                        <VBox prefWidth="550" prefHeight="580" HBox.hgrow="ALWAYS">
+                            <children>
+                                <HBox prefHeight="60" prefWidth="550.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="130.0" style="-fx-text-fill: orange;" text="Administrator">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="50.0" top="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+
+
+                                        <TextField  fx:id ="cuCeSeSchimba" prefHeight="26.0" prefWidth="150.0" promptText="Cu ce vreti sa schimbati" opacity="0">
+                                            <HBox.margin>
+                                                <Insets top="20.0" />
+                                            </HBox.margin>
+                                        </TextField>
+
+<!--                                        <Button onAction="#schimba" fx:id="schimba" text="schimba" opacity="0"-->
+<!--                                                style="-fx-background-color: orange; -fx-background-radius: 100PX; -fx-text-fill: white;"-->
+<!--                                                VBox.vgrow="ALWAYS">-->
+<!--                                            <HBox.margin>-->
+<!--                                                <Insets top="10.0" left="10.0" />-->
+
+<!--                                            </HBox.margin>-->
+<!--                                        </Button>-->
+
+                                        <Label fx:id ="Update" text="" prefHeight="300.0" prefWidth="500.0" opacity="0"
+                                               style="-fx-background-color: orange">
+                                            <HBox.margin>
+                                                <Insets top="20.0" left="100.0" />
+
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="550.0">
+                                    <children>
+                                        <Label onMouseClicked="#showIstoricComenzi" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="150.0" style="-fx-text-fill: orange;" text="IstoricComenzi">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+
+                                        <Label onMouseClicked="#showUtilizatori" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="120.0" style="-fx-text-fill: orange;" text="Utilizatori">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+
+                                        <Label onMouseClicked="#showLivratori" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="100.0" style="-fx-text-fill: orange;" text="Livratori">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+
+                                        <Label onMouseClicked="#showPizza" alignment="TOP_LEFT" prefHeight="23.0" prefWidth="100.0" style="-fx-text-fill: orange;" text="Pizza">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+
+                                        <TextField  fx:id ="ce" prefHeight="26.0" prefWidth="150.0" promptText="Ce vreti sa schimbati" opacity="0">
+                                            <HBox.margin>
+                                                <Insets top="20.0" />
+                                            </HBox.margin>
+                                        </TextField>
+
+
+                                        <Button onAction="#afisare" fx:id="edit" text="Afisare" opacity="0"
+                                                style="-fx-background-color: orange; -fx-background-radius: 100PX; -fx-text-fill: white;"
+                                                VBox.vgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets top="10.0" left="10.0" />
+
+                                            </HBox.margin>
+                                        </Button>
+
+                                        <Button onAction="#stergere" fx:id="sterge" text="Sterge" opacity="0"
+                                                style="-fx-background-color: orange; -fx-background-radius: 100PX; -fx-text-fill: white;"
+                                                VBox.vgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets top="10.0" left="10.0" />
+
+                                            </HBox.margin>
+                                        </Button>
+
+                                        <Button onAction="#afiseaza2" fx:id="insert" text="afiseaza2" opacity="0"
+                                                style="-fx-background-color: orange; -fx-background-radius: 100PX; -fx-text-fill: white;"
+                                                VBox.vgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets top="10.0" left="10.0" />
+
+                                            </HBox.margin>
+                                        </Button>
+
+                                        <Label fx:id ="Update2" text="" prefHeight="100.0" prefWidth="400.0" opacity="0"
+                                               style="-fx-background-color: orange">
+                                            <HBox.margin>
+                                                <Insets top="20.0" left="10.0" />
+
+                                            </HBox.margin>
+                                        </Label>
+
+                                    </children>
+                                </HBox>
+
+                                <TableView fx:id ="tabel" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id ="col_default1" prefWidth="100" text="numePizza" />
+                                        <TableColumn fx:id ="col_ID" prefWidth="150" text="Ingredient_ID" />
+                                        <TableColumn fx:id ="col_default2" prefWidth="150" text="numeIngredient" />
+                                        <TableColumn fx:id ="col_default3" prefWidth="150" text="Default" />
+                                        <TableColumn fx:id ="col_default4" prefWidth="150" text="Default" />
+                                        <TableColumn fx:id ="col_default5" prefWidth="150" text="Default" />
+                                    </columns>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </TableView>
+
+                            </children>
+                        </VBox>
+
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
+
+</AnchorPane>

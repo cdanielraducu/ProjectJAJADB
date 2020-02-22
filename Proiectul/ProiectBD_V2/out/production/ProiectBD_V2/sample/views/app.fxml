@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controllers.AppController"
+            prefHeight="400.0" prefWidth="840.0">
+
+    <children>
+        <StackPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" StackPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="580.0" prefWidth="230.0" style="-fx-background-color: orange;">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="18.0" prefWidth="237.0" text="PIZZADANIEL" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label onMouseClicked="#goToCont" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="237.0" text="Cont">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0">
+                                                    <image>
+                                                        <Image url="@/sample/views/Imagini/user.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets top="75.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label onMouseClicked="#goToCos" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="237.0" text="Cos">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0">
+                                                    <image>
+                                                        <Image url="@/sample/views/Imagini/cart.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets top="50.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="237.0" text="Meniu">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0">
+                                                    <image>
+                                                        <Image url="@/sample/views/Imagini/pizza_icon.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets top="50.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label onMouseClicked="#signup" alignment="TOP_LEFT" prefHeight="18.0" prefWidth="237.0" text="Deconectare">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="50.0" />
+                                            </VBox.margin>
+                                            <graphic>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0">
+                                                    <Image url = "@/sample/views/Imagini/deconectare.png"/>
+                                                </ImageView>
+                                            </graphic>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="580.0" prefWidth="550.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <HBox prefHeight="60.0" prefWidth="550.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="66.0" style="-fx-text-fill: orange;" text="Meniu">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="50.0" top="20.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField  fx:id ="filterField" prefHeight="26.0" prefWidth="150.0" promptText="Cautare...">
+                                            <HBox.margin>
+                                                <Insets top="20.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0">
+                                            <image>
+                                                <Image url="@/sample/views/Imagini/search.png" />
+                                            </image>
+                                            <HBox.margin>
+                                                <Insets top="20.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+
+                                        <Button onAction="#addToCart" text="Add to cart!"
+                                                style="-fx-background-color: orange; -fx-background-radius: 100PX; -fx-text-fill: white;"
+                                                VBox.vgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets top="20.0" left="20.0" />
+
+                                            </HBox.margin>
+                                        </Button>
+
+                                        <Label fx:id ="Update" text=""
+                                                style="-fx-background-color: orange">
+                                            <HBox.margin>
+                                                <Insets top="20.0" left="200.0" />
+
+                                            </HBox.margin>
+                                        </Label>
+
+                                    </children>
+                                </HBox>
+
+                                <TableView fx:id ="tabel" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id ="col_ID" prefWidth="40" text="ID" />
+                                        <TableColumn fx:id ="col_NumePizza" prefWidth="100" text="Nume Pizza" />
+                                        <TableColumn fx:id ="col_Ingrediente" prefWidth="800" text="Ingrediente" />
+                                        <TableColumn fx:id ="col_Origine" prefWidth="80" text="Origine" />
+                                        <TableColumn fx:id ="col_Pret" prefWidth="40" text="Pret" />
+                                        <TableColumn fx:id ="col_Imagine" prefWidth="200" text="Imagine" />
+
+                                    </columns>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </TableView>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
+
+</AnchorPane>

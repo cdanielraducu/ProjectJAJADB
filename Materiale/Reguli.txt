@@ -1,0 +1,14 @@
+Un utilizator are mai multe locatii
+O locatie apartine doar unui utilizator
+
+Un utilizator poate sa faca mai multe comenzi
+O comanda poate sa fie facut doar de un utilizator
+
+Un livrator poate sa livreze mai multe comenzi
+O comanda pote fi dusa doar de un livrator
+
+O pizza poate apartine mai multor comenzi
+O comanda poate sa contina mai multe tipuri de pizza
+
+O pizza poate sa aiba mai multe ingrediente
+Un ingredient poate sa fie gasit pe mai multe tipuri de pizza
